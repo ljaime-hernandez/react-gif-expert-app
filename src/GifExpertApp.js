@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategories = ['Gantz', 'Cowboy Bebop']}) => {
 
     // default element on our categories section is "Death Note", which is used to trigger the component into our webpage, as seen below,
     // the setCategories function from our hook is being passed to the AddCategory script, which we will use to add additional elements to
     // our string array, along with that, we are rendering the categories object with a GifGrid component for it to have an specific visual
     // effect described on its script
-    const [categories, setCategories] = useState(['Death Note']);
+    // const [categories, setCategories] = useState(['Death Note']);
+    const [categories, setCategories] = useState(defaultCategories);
 
     return (
         <div>

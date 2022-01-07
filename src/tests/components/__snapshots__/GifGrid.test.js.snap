@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on <GifGrid /> should display component correctly 1`] = `
+<Fragment>
+  <h3>
+    Gantz
+  </h3>
+  <p>
+    Loading
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
+
+exports[`Tests on <GifGrid /> should show items when loading images from useFetchGifs 1`] = `
+<Fragment>
+  <h3>
+    Gantz
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="Gantz"
+      key="Gantz"
+      title="Gantz Title"
+      url="https://gantz.org"
+    />
+  </div>
+</Fragment>
+`;

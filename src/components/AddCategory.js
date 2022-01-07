@@ -29,7 +29,9 @@ export const AddCategory = ({setCategories}) => {
         if (inputValue.trim().length > 2){
             // inputvalue is placed first for it to push the other results to the bottom on the screen and have
             // the new results for quick reading
-            setCategories(category => [inputValue, ...category])
+            setCategories(category => [inputValue, ...category]);
+            // sets the text input box to an empty state
+            setInputValue('');
         }
         
         console.log('Submit succeed')
@@ -37,6 +39,9 @@ export const AddCategory = ({setCategories}) => {
 
     return (
         <form onSubmit={handleSubmit}>
+            {/*'p' element added just for testing purposes, more information on the file located in
+            tests/components/AddCategory.test.js file*/}
+            <p hidden>{inputValue}</p>
             <input
                 type="text"
                 value={inputValue}
