@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
+// added defaultCategories as arguments to the GifExpertApp component for us to have a better approach
+// when testing the hook on it, as we are unable to test the categories once the main argument
+// has been set on it at the useState, if we want to modify the default arguments we want to start the component
+// with, then is best practice to do so as an initial argument in the component and not on the hook
 export const GifExpertApp = ({defaultCategories = ['Gantz', 'Cowboy Bebop']}) => {
 
     // default element on our categories section is "Death Note", which is used to trigger the component into our webpage, as seen below,
@@ -9,6 +13,9 @@ export const GifExpertApp = ({defaultCategories = ['Gantz', 'Cowboy Bebop']}) =>
     // our string array, along with that, we are rendering the categories object with a GifGrid component for it to have an specific visual
     // effect described on its script
     // const [categories, setCategories] = useState(['Death Note']);
+
+    // changed the previous string set as default argument for the component to now be the defaultCategories
+    // placed as initial arguments on the component
     const [categories, setCategories] = useState(defaultCategories);
 
     return (
