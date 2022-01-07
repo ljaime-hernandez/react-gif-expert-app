@@ -49,10 +49,10 @@ extra effort on the details for it to be as clear as possible and for anyone to 
 
 ### dependencies:
 
-animate (CDN)
-enzyme
-enzyme-to-json
-jest
-react-hooks
-bootstrap
-react
+- animate (CDN)
+- enzyme
+- enzyme-to-json
+- jest
+- react-hooks
+- bootstrap (CDN)
+- react
